@@ -1,0 +1,53 @@
+@import "../../globals/_css-resets.scss";
+@import "../../globals/_mixins.scss";
+@import "../../globals/_variables.scss";
+@import "../../globals/_media-queries.scss";
+@import "../../globals/_font-face";
+@import "./BurgerMixin.scss";
+
+.BurgerMenu {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    // top: 12px;
+    top: 5px;
+    right: 20px;
+    border-radius: 4px;
+    z-index: 1000000;
+    span {
+        /* $width: 30px, $height: 5px, $gutter: 3px, $color: #000,
+        $border-radius: 0, $transition-duration: .3s*/
+        @include burger(30px, 3px, 6px, $Burger_Menu_Closed_Color,0,.5s);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: -1.5px;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+
+        &:before,
+        &:after {
+            box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        &:hover {
+            background-color: $Burger_Menu_Open_Color;
+        }
+    }
+
+    &.clicked {
+        span {
+            @include burger-to-cross;
+            box-shadow: none;
+
+            &:before,
+            &:after {
+                background-color: $Burger_Menu_Open_Color;
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

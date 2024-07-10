@@ -1,0 +1,14 @@
+@import "./_variables.scss";
+// CSS Resets
+html{scrollbar-width: none;}
+*::-webkit-scrollbar{display: none;}
+
+*,*::after,*::before{
+    padding: 0; margin: 0; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    overscroll-behavior: none;
+    /* user-select: none; */
+    scroll-padding-top: $Navbar_Height;
+    scroll-behavior: smooth;
+}

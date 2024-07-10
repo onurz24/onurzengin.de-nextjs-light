@@ -1,0 +1,63 @@
+.Contact_Form{
+    @include zentrieren(center,center,column);
+    color: black;
+    border-radius: 8px;
+    padding-top: 1em;
+
+    width: 100%;
+        .Contact_NameMail_Container{
+            width: 100%;
+            // background-color: rgb(27, 27, 27);
+            @include zentrieren(space-between,center,row);
+            @media screen and (max-width : $Mobile_Breakpoint_L) {
+                flex-direction: column;
+            }
+            .Contact_Name_Input,.Contact_Mail_Input{
+                /*Test
+                background-color: rgba(197, 197, 197, 0.918);
+                &::placeholder {
+                    color: white;
+                }
+                Test End*/
+                padding: 1em;
+                margin-bottom: .5em;
+                width: 49.8%;
+                border: transparent;
+                border-radius: 8px;
+                @media screen and (max-width : $Mobile_Breakpoint_L) {
+                    width: 100%;
+                }
+            }
+            .Contact_Name_Input{
+
+            }
+            .Contact_Mail_Input{
+
+            }
+        }
+        .Contact_SubjectPhone_Container{
+            width: 100%;
+            @include zentrieren();
+
+            .Contact_Subject_Input,
+            .Contact_Phone_Input{
+                margin-bottom: .5em;
+                width: 100%;
+                border: transparent;
+                border-radius: 4px;
+                padding: 1em;
+            }
+        }
+        .Contact_Message_Container{
+            width: 100%;
+            textarea{
+                border: transparent;
+                padding: 1em;
+                border-radius: 4px;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100px;
+            }
+        }
+}

@@ -1,0 +1,17 @@
+@import "./_css-resets.scss";
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+
+
+@media screen and (min-width : $Tablet_Breakpoint) {
+    .BurgerMenu{
+        /* Hide Burger Menu for Navlinks */
+        display: none !important;
+    }
+    .Sidebar{
+        /* Hide Sidebar on Desktop*/
+        display: none !important;
+    }
+}
+

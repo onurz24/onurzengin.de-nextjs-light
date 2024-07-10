@@ -1,0 +1,75 @@
+@import "../../globals/_css-resets.scss";
+@import "../../globals/_mixins.scss";
+@import "../../globals/_variables.scss";
+@import "../../globals/_media-queries.scss";
+@import "../../globals/_font-face";
+
+
+
+
+.Services{
+    background-color: $WhiteBG_Alt;
+    color: $FontBlack;
+    width: 100%;
+    @include zentrieren();
+    font-family: "Poppins",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2em;
+    @media screen and (max-width : $Tablet_Breakpoint) {
+        padding: 1.5em 1.5em 2em 1.5em;
+    }
+    .Services_Headline{
+        font-size: 32px;
+        text-align: center;
+        width: 80%;
+        font-weight: 500;
+        @media screen and (max-width : $Laptop_Breakpoint_L) {
+            width: 85%;
+        }
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            width: 100%;
+            text-align: left;
+        }
+        @media screen and (max-width : $Tablet_Breakpoint) {
+            width: 100%;
+            font-size: 24px;
+        }
+        @media screen and (max-width : $Mobile_Breakpoint_L) {
+            width: 100%;
+        }
+    }
+    .Services_Description{
+        line-height: 2em;
+        text-align: center;
+        @include boxed-responsive;
+    }
+    .Services_Container{
+        padding: 2em 0 0 0;
+        gap: 2em;
+        @media screen and (min-width : 1700px) {
+            gap: 0;
+        }
+        @include zentrieren-grid(1fr,3,auto);
+        width: 80%;
+        @media screen and (max-width : $Laptop_Breakpoint_L) {
+            width: 90%;
+        }
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            width: 100%;
+            text-align: left;
+            @include zentrieren-grid(1fr,2,auto);
+            gap: 1em;
+        }
+        @media screen and (max-width : $Tablet_Breakpoint) {
+            width: 100%;
+            font-size: 24px;
+            @include zentrieren-grid(1fr,2,auto);
+            padding: 1em 0 0 0;
+
+        }
+        @media screen and (max-width : 600px) {
+            width: 100%;
+            @include zentrieren-grid(1fr,1,auto);
+
+        }
+    }
+}

@@ -1,0 +1,77 @@
+/* /app/assets/components/Techstack/Techstack.scss */
+@import "../../globals/_css-resets.scss";
+@import "../../globals/_mixins.scss";
+@import "../../globals/_variables.scss";
+@import "../../globals/_media-queries.scss";
+@import "../../globals/_font-face";
+
+
+.Techstack{
+    width: 100%;
+    background-color: black;
+    color: white;
+    @include zentrieren();
+    font-family: "Poppins",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 3em 2em 3em 2em;
+    @media screen and (max-width : $Tablet_Breakpoint) {
+        padding: 1.5em 1.5em 2em 1.5em;
+    }
+    .Techstack_Headline{
+        font-size: 32px;
+        text-align: center;
+        width: 80%;
+        font-weight: 500;
+        @media screen and (max-width : $Laptop_Breakpoint_L) {
+            width: 85%;
+        }
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            width: 100%;
+            text-align: left;
+        }
+        @media screen and (max-width : $Tablet_Breakpoint) {
+            width: 100%;
+            font-size: 24px;
+        }
+        @media screen and (max-width : $Mobile_Breakpoint_L) {
+            width: 100%;
+        }
+    }
+    .Techstack_Description{
+        line-height: 2em;
+        text-align: center;
+        width: 80%;
+        @media screen and (max-width : $Laptop_Breakpoint_L) {
+            width: 85%;
+        }
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            width: 100%;
+            text-align: left;
+        }
+        @media screen and (max-width : $Tablet_Breakpoint) {
+            width: 100%;
+            font-size: smaller;
+        }
+        @media screen and (max-width : $Mobile_Breakpoint_L) {
+            width: 100%;
+        }
+    }
+    .Skills_Container{
+        @include zentrieren-grid(1fr,3,auto);
+        padding-top: 1em;
+        width: 80%;
+        gap: 2em;
+        overflow: scroll;
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr); // Mobil: 2x3
+        }
+        @media screen and (max-width : $Tablet_Breakpoint) {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr); // Mobil: 1x6
+        }
+        @media screen and (max-width : $Mobile_Breakpoint_S) {
+            width: 100%;
+        }
+
+    }
+}

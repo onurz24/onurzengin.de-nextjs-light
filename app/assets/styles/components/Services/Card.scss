@@ -1,0 +1,117 @@
+@import "../../globals/_css-resets.scss";
+@import "../../globals/_mixins.scss";
+@import "../../globals/_variables.scss";
+@import "../../globals/_media-queries.scss";
+@import "../../globals/_font-face";
+
+
+.Card{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    @media screen and (min-width : 1700px) {
+        width: 80%;
+        transform: translateX(10%);
+    }
+
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0 0 10px rgb(214, 214, 214);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 16px;
+    @media screen and (max-width : $Mobile_Breakpoint_L) {
+        height: 400px;
+    }
+    .Card_Blub{
+        z-index: 5;
+        border-top: 150px solid transparent;
+        border-bottom: 250px solid whitesmoke ;
+        border-right: 1000px solid whitesmoke;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .Card_BG_Image{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background : linear-gradient(to right  , #8D7BA6 5%, #F2A057);
+        @apply bg-gradient-to-l from-blue-500 to-blue-300;
+        filter: brightness(80%);
+        @include zentrieren();
+            img{
+                width: 40%;
+                object-fit: contain;
+            }
+    }
+
+    .Card_Headline{
+        width: 100%;
+        font-family: "Poppins";
+        font-weight: 700;
+        color: black;
+        padding: 1em;
+        padding-top: 3em;
+        line-height: 1em;
+        @include zentrieren();
+        word-wrap: break-word;
+        font-size: 38px;
+
+        // background: -webkit-linear-gradient(180deg, #BF395D, #1c0042,#233D8C);
+        // background: -webkit-linear-gradient(180deg, #a200ff, #1c0042,#233D8C);
+        // background: -webkit-linear-gradient(180deg, darkblue, rgb(0, 0, 82),#233D8C);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: 25%;
+        z-index: 10;
+        @media screen and (max-width : $Laptop_Breakpoint_L){
+            font-size: 32px;
+        }
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            bottom: 30%;
+        }
+        @media screen and (max-width : $Tablet_Breakpoint) {
+            font-size: 28px;
+            font-size: 36px;
+        }
+        @media screen and (max-width : $Mobile_Breakpoint_S) {
+            font-size: 24px;
+            bottom: 35%;
+        }
+    }
+    .Card_Btn_Container{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        @include zentrieren();
+        position: absolute;
+        bottom: 15%;
+        @media screen and (max-width : $Laptop_Breakpoint) {
+            bottom: 20%;
+        }
+        @media screen and (max-width : $Mobile_Breakpoint_S) {
+            bottom: 25%;
+        }
+        .Card_LearnMore_Btn{
+            border: 2px solid rgb(22, 22, 22);
+            color: black;
+            padding: .5em;
+            cursor: pointer;
+            transition: all .5s;
+            @media screen and (max-width : $Tablet_Breakpoint) {
+                padding: .3em;
+                font-size: 18px;
+            }
+            &:hover,:active{
+                scale: 1.2;
+                padding: .4em;
+                border-width: 2px;
+                transition: all .5s;
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

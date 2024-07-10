@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_media-queries.scss";
+@import "./_font-face.scss";
+@import "./_css-resets.scss";
+
+  /*@media (prefers-color-scheme: dark) {}*/
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: black;
+  @apply bg-slate-100
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.error-shake{
+  animation: invalid-shake 0.5s ease-in-out;
+  @keyframes invalid-shake {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
+.error-shake-border{
+  border: 2px solid red;
+  animation: invalid-shake 0.5s ease-in-out;
+  @keyframes invalid-shake {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
+
+
+.LaptopAnimation-Desktop{
+  animation: LaptopAni-Desktop 1s infinite;
+  @keyframes LaptopAni-Desktop{
+    from {
+        left : 100%;
+    }
+    to{
+      left: calc(50% - 150px);
+    }
+  }
+}
+
+
+

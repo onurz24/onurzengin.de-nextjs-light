@@ -1,0 +1,24 @@
+@import "../../globals/_css-resets.scss";
+@import "../../globals/_mixins.scss";
+@import "../../globals/_variables.scss";
+@import "../../globals/_media-queries.scss";
+@import "../../globals/_font-face";
+
+.Sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: $Sidebar_BG_Color;
+    transform: translate(-100%,0);
+    transition: transform .5s ease-in-out;
+    color: white;
+    &.Show_Sidebar{
+        transform: translate(0,0);
+        transition: transform .5s ease-in-out;
+    }
+}

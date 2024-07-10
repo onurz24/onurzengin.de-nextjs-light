@@ -1,0 +1,81 @@
+// Mixins 
+@mixin zentrieren($xAchse:center,$yAchse:center,$reihenfolge:column){
+    display: flex;
+    justify-content: $xAchse;
+    align-items: $yAchse;
+    flex-direction: $reihenfolge;
+    text-align: center;
+    // Example :  @include zentrieren();
+}
+@mixin zentrieren-grid($xAchse:20%,$wieOft:5,$hoehe :auto){
+    display: grid;
+    grid-template-columns: repeat($wieOft,$xAchse);
+    grid-auto-rows: $hoehe;
+    justify-content: center;
+    align-items: center;
+    // Example : @include zentrieren-grid(20%, 5);
+}
+
+@mixin schrift ($farbe:black,$size:medium,$breite:normal){
+    color: $farbe;
+    font-size : $size;
+    font-weight: $breite;
+}
+
+@mixin umrandung {
+    color: white;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+@mixin EchtheitEffekt {
+    filter: drop-shadow(.5px .5px 3px rgb(0, 0, 0));
+    // Example : @include EchtheitEffekt;
+}
+
+/* Uhrzeiger Format Oben Rechts Unten Links */
+@mixin positionieren($top : 0, $right : 0, $bottom : 0, $left : 0){
+    top: $top;
+    right: $right;
+    bottom : $bottom;
+    left : $left;
+}
+/* Uhrzeiger Format Oben Rechts Unten Links */
+@mixin pseudo_positionieren($top : 0, $right : 0, $bottom : 0, $left : 0){
+    position: absolute;
+    content: "";
+    top: $top;
+    right: $right;
+    bottom : $bottom;
+    left : $left;
+}
+
+@mixin disableDrag {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+@mixin boxed-responsive {
+    width: 80%;
+    @media screen and (max-width : $Laptop_Breakpoint_L) {
+        width: 85%;
+    }
+    @media screen and (max-width : $Laptop_Breakpoint) {
+        width: 100%;
+        text-align: left;
+    }
+    @media screen and (max-width : $Tablet_Breakpoint) {
+        width: 100%;
+        font-size: smaller;
+    }
+    @media screen and (max-width : $Mobile_Breakpoint_L) {
+        width: 100%;
+    }
+}

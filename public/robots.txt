@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://onurzengin.de
+
+# Sitemaps
+Sitemap: https://onurzengin.de/sitemap.xml
