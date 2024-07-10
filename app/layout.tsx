@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
-      <html lang="de" className="brightness-50">
+      <html lang="de">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         </head>
