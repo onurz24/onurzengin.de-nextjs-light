@@ -74,12 +74,10 @@
             left: 0;
             right: 0;
             z-index: 5;
-            height: 250px;
         //  @apply bg-gradient-to-r from-violet-600 to-purple-400;
             @apply bg-gradient-to-r from-blue-600 to-blue-400;
             filter: brightness(95%);
             
-            width: 250px; 
             border-radius: 100%;
         }
          .About_Image{
