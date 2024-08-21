@@ -8,22 +8,12 @@
     position: fixed;
     right: 1vw;
     bottom: 1vw;
-    @media screen and (max-width : $Mobile_Breakpoint_L) {
-        right: 1vw;
-        bottom: 1vw;
-    }
     z-index: 1000;
-    color: white;
-    font-size: 56px;
     cursor: pointer;
+    color: #000;
+    font-size: 56px;
+    @media screen and (max-width : $Mobile_Breakpoint_L) {
 
-    svg{
-        color: #000000;
-
-        cursor: pointer;
-        path{
-            cursor: pointer;
-        }
     }
 }
 

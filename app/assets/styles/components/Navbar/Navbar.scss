@@ -40,7 +40,7 @@ nav{
         height: 100%;
         width: 80%;
         @include zentrieren();
-        align-items: end;
+        align-items: flex-end;
         .Nav_Links_Content{
             @include zentrieren(center,center,row);
             width: 50%;
